@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,700;1,14..32,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__inner">
+            <a href="index.html" class="logo">
+              <img src="images/logo.svg" alt="" class="logo__img" />
+            </a>
+            <nav class="menu">
+              <button class="menu__btn">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+              <ul class="menu__list">
+                <li class="menu__list-item">
+                  <a href="new-cars.html" class="menu__list-link">АВТОМОБІЛІ</a>
+                </li>
+                <li class="menu__list-item">
+                  <a href="preowned.html" class="menu__list-link"
+                    >ДОДАТКОВА ІНФОРМАЦІЯ</a
+                  >
+                </li>
+                <li class="menu__list-item">
+                  <a
+                    href="finance.html"
+                    class="menu__list-link menu__list-link--active"
+                    >ОФОРМЛЕННЯ</a
+                  >
+                </li>
+                <li class="menu__list-item">
+                  <a href="lease.html" class="menu__list-link"
+                    >ЛІЗИНГ ЧИ КРЕДИТ</a
+                  >
+                </li>
+                <li class="menu__list-item">
+                  <a href="contacts.html" class="menu__list-link"
+                    >ЗВ'ЯЗОК З НАМИ</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <div class="container">
+          <h2 class="order__title">
+            Заповніть форму для замовлення автомобіля
+          </h2>
+          <div class="order__form">
+            <form action="" class="finance__form">
+              <input type="text" placeholder="Назва автомобіля" name="car__name" required/>
+              <input type="text" placeholder="Ваше ім’я" name="people__name" required/>
+              <input type="text" placeholder="Ваше прізвище" name="people__name" required/>
+              <input type="email" placeholder="Ваш емейл" name="people__name" required/>
+              <input type="text" placeholder="Ваш номер телефону" name="people__phone-number" required/>
+            </form>
+          </div>
+          <div class="order__dv">
+            <button type="submit" class="order__submit">
+              Підтвердити замовлення
+            </button>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__copy">
+            <div class="footer__logo">
+              <a href="index.html" class="foot__logo">
+                <img src="images/logo.svg" alt="" class="foot-logo__img" />
+              </a>
+            </div>
+            <p class="footer__copy-text">
+              Якщо у вас виникли питання про послугу автовикупу TrueCar, будь
+              ласка, зателефонуйте за номером +(380)933000536. Сертифіковані
+              дилери зобов'язані за договором з TrueCar відповідати певним
+              вимогам до обслуговування клієнтів та пройти Програму сертифікації
+              дилерів TrueCar.
+            </p>
+            <p class="footer__copy-text">
+              TrueCar не займається посередництвом, продажем або орендою
+              автомобілів. Якщо тільки не зазначено інше, всі автомобілі,
+              представлені на цьому сайті, пропонуються для продажу
+              ліцензованими автодилерами. Всі автомобілі підлягають попередньому
+              продажу. Відвідуючи цей сайт, ви погоджуєтеся з з Умовами надання
+              послуг та Політикою конфіденційності TrueCar.
+            </p>
+            <p class="footer__roots-text">
+              © 2025 D&MLeasing. Всі права захищені
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      // Список доступних авто — має збігатись з тими, що показані на сайті
+      const availableCars = [
+        "Toyota Crown 2023",
+        "Prius Prime 2023",
+        "Prius Prime",
+        "Toyota Crown",
+        "Toyota Prius 2023",
+        "Toyota Prius",
+        "Hyundai Kona 2023",
+        "Hyundai Kona ",
+        "Ford Explorer 2023",
+        "Ford Explorer",
+        "Santa Fe 2023",
+        "Santa Fe",
+        "KIA Niro 2023",
+        "KIA Niro",
+        "Honda CR-V 2023",
+        "Honda CR-V",
+        "Hyundai Tucson",
+        "Chevrolet Equinox",
+        "Jeep Wrangler 2023",
+        "Jeep Wrangler",
+        "Chevrolet Silverado"
+      ];
+    
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector(".finance__form");
+        const submitBtn = document.querySelector(".order__submit");
+    
+        submitBtn.addEventListener("click", function (e) {
+          e.preventDefault();
+    
+          const carNameInput = form.querySelector('input[name="car__name"]');
+          const enteredCarName = carNameInput.value.trim();
+    
+          if (!availableCars.includes(enteredCarName)) {
+            alert("Цієї машини немає в нашому каталозі. Перевірте правильність назви.");
+            carNameInput.focus();
+            return;
+          }
+    
+          // Якщо машина знайдена — надсилаємо форму (тут можна додати реальне надсилання)
+          alert("Форму успішно надіслано! Очікуйтена дзвінок менеджера!");
+          form.submit(); // або обробка через fetch/AJAX
+        });
+      });
+    </script>
+  </body>
+</html>
