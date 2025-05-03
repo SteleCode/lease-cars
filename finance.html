@@ -68,11 +68,36 @@
           </h2>
           <div class="order__form">
             <form action="" class="finance__form">
-              <input type="text" placeholder="Назва автомобіля" name="car__name" required/>
-              <input type="text" placeholder="Ваше ім’я" name="people__name" required/>
-              <input type="text" placeholder="Ваше прізвище" name="people__name" required/>
-              <input type="email" placeholder="Ваш емейл" name="people__name" required/>
-              <input type="text" placeholder="Ваш номер телефону" name="people__phone-number" required/>
+              <input
+                type="text"
+                placeholder="Назва автомобіля"
+                name="car__name"
+                required
+              />
+              <input
+                type="text"
+                placeholder="Ваше ім’я"
+                name="people__name"
+                required
+              />
+              <input
+                type="text"
+                placeholder="Ваше прізвище"
+                name="people__name"
+                required
+              />
+              <input
+                type="email"
+                placeholder="Ваш емейл"
+                name="people__name"
+                required
+              />
+              <input
+                type="text"
+                placeholder="Ваш номер телефону"
+                name="people__phone-number"
+                required
+              />
             </form>
           </div>
           <div class="order__dv">
@@ -135,29 +160,38 @@
         "Chevrolet Equinox",
         "Jeep Wrangler 2023",
         "Jeep Wrangler",
-        "Chevrolet Silverado"
+        "Chevrolet Silverado",
       ];
-    
+
       document.addEventListener("DOMContentLoaded", function () {
         const form = document.querySelector(".finance__form");
         const submitBtn = document.querySelector(".order__submit");
-    
+
         submitBtn.addEventListener("click", function (e) {
           e.preventDefault();
-    
+
           const carNameInput = form.querySelector('input[name="car__name"]');
           const enteredCarName = carNameInput.value.trim();
-    
+
           if (!availableCars.includes(enteredCarName)) {
-            alert("Цієї машини немає в нашому каталозі. Перевірте правильність назви.");
+            alert(
+              "Цієї машини немає в нашому каталозі. Перевірте правильність назви."
+            );
             carNameInput.focus();
             return;
           }
-    
+
           // Якщо машина знайдена — надсилаємо форму (тут можна додати реальне надсилання)
           alert("Форму успішно надіслано! Очікуйтена дзвінок менеджера!");
           form.submit(); // або обробка через fetch/AJAX
         });
+      });
+
+      const menuBtn = document.querySelector(".menu__btn");
+      const menu = document.querySelector(".menu__list");
+
+      menuBtn.addEventListener("click", () => {
+        menu.classList.toggle("menu__list--active");
       });
     </script>
   </body>
