@@ -1,3 +1,4 @@
+/* SETTING GENERAL SETTINGS TO PAGE */
 html {
   box-sizing: border-box;
 }
@@ -26,7 +27,7 @@ a {
 
 .section-title {
   margin-bottom: 50px;
-  font-style: 48px;
+  font-size: 48px;
   font-weight: 700;
   text-align: center;
 }
@@ -49,7 +50,7 @@ body {
   font-weight: 400;
   line-height: 1.3;
 }
-
+/* HEADER STYLES */
 .header {
   background-color: #151515;
 }
@@ -83,37 +84,11 @@ body {
 .menu__list-link--active {
   color: #0066ff;
 }
-
+/* FOOTER STYLES */
 .footer {
   background-color: #151515;
   padding: 50px 0 32px;
   color: #fff;
-}
-
-.footer__menu {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 50px;
-}
-
-.footer__menu-list {
-  max-width: 250px;
-}
-
-.footer__menu-title {
-  font-size: 24px;
-  font-weight: 700;
-}
-
-.footer__menu-item + .footer__menu-item {
-  padding-top: 20px;
-}
-
-.app {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-bottom: 52px;
 }
 
 .footer__copy {
@@ -126,19 +101,13 @@ body {
   margin-bottom: 20px;
 }
 
-.copy__nav-list {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-}
-
 .footer__logo {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
 }
-
+/* STYLES FOR MAIN PART INDEX PAGE */
 .main {
   flex-grow: 1;
 }
@@ -155,10 +124,11 @@ body {
 }
 
 .title {
-  padding-top: 105px;
+  padding-top: 10px;
   padding-bottom: 40px;
-  font-style: 96px;
+  font-size: 96px;
   font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .top__link {
@@ -168,11 +138,12 @@ body {
   width: 100%;
   display: inline-block;
   text-transform: uppercase;
-  font-style: 36px;
+  font-size: 36px;
   font-weight: 700;
   border-radius: 6px;
 }
 
+/* SWIPER STYLES */
 .swiper-wrapper {
   background: rgba(21, 21, 21, 0.3);
 }
@@ -206,7 +177,7 @@ body {
 .swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: 15px;
 }
-
+/* WHY LEASE SECTION */
 .why-lease {
   padding: 150px 0;
 }
@@ -228,10 +199,10 @@ body {
 
 .why-lease__item-title {
   margin-bottom: 30px;
-  font-style: 24px;
+  font-size: 24px;
   font-weight: 700;
 }
-
+/* HOW DOES SECTION */
 .how-does {
   padding-bottom: 150px;
 }
@@ -242,7 +213,7 @@ body {
 }
 
 .how__does-title {
-  font-style: 24px;
+  font-size: 24px;
   font-weight: 700;
   padding-top: 50px;
 }
@@ -283,7 +254,7 @@ body {
   left: 0;
   top: 0;
 }
-
+/* IMPORTANT SECTION */
 .important {
   padding-bottom: 150px;
 }
@@ -305,7 +276,7 @@ body {
 .important__item-img {
   margin-bottom: 20px;
 }
-
+/* CONTACTS PAGE STYLES */
 .contacts {
   padding: 100px 0 150px;
 }
@@ -313,7 +284,7 @@ body {
 .contacts__text {
   text-align: center;
   font-weight: 700;
-  font-style: 24px;
+  font-size: 24px;
   margin-bottom: 50px;
   padding: 0 100px;
 }
@@ -383,7 +354,7 @@ form {
   border: none;
   border-radius: 6px;
 }
-
+/* BLOG STYLES */
 .blog {
   padding-bottom: 150px;
 }
@@ -409,7 +380,7 @@ form {
 .blod__item-title {
   flex-basis: 446px;
   font-weight: 700;
-  font-style: 24px;
+  font-size: 24px;
 }
 
 .blod__item-link {
@@ -435,7 +406,7 @@ form {
 .choose {
   padding: 100px 0 150px;
 }
-
+/* NEW CARS STYLES */
 .tabs__btn {
   padding: 0 150px 100px;
   display: flex;
@@ -465,7 +436,7 @@ form {
 .tabs__content-item.tabs__content-item--active {
   display: grid;
 }
-
+/* CARD STYLES */
 .card {
   text-align: center;
   margin-bottom: 50px;
@@ -591,12 +562,10 @@ form {
   justify-content: space-around;
 }
 
-
-
 .hidden {
   display: none;
 }
-
+/* PREOWNED PAGE STYLES */
 .text__preowned-alone {
   display: flex;
   justify-content: center;
@@ -615,13 +584,12 @@ form {
   margin-bottom: 50px;
   color: #151515;
 }
-
+/* LEASE PAGE STYLES */
 .advantages {
-  padding: 0 100px;
+  padding: 20px;
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 12px;
-  padding: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin: 20px auto;
 }
@@ -702,7 +670,7 @@ ul.bank__leasing-list {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin: 20px auto;
 }
-
+/* FINANCE PAGE STYLES */
 .order__form {
   max-width: 500px;
   margin: 40px auto;
@@ -773,7 +741,7 @@ ul.bank__leasing-list {
   margin-top: 60px;
   margin-bottom: 50px;
 }
-
+/* MEDIA STYLES */
 @media (max-width: 1180px) {
   .important__list {
     gap: 30px 20px;
@@ -894,7 +862,7 @@ ul.bank__leasing-list {
   }
   .blog__items {
     grid-template-columns: repeat(1, 1fr);
-  }
+  }іу
   .contacts {
     padding: 50px 0;
   }
