@@ -1,6 +1,6 @@
 document.querySelector('.form').addEventListener('submit', function (e) {
-    e.preventDefault(); // Зупиняємо стандартну відправку форми
-    this.reset(); // Очищаємо всі поля форми
+    e.preventDefault();
+    this.reset(); 
   });
 
   const menuBtn = document.querySelector('.menu__btn');

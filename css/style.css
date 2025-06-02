@@ -141,6 +141,12 @@ body {
   font-size: 36px;
   font-weight: 700;
   border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.top__link:hover{
+  background-color: #218838;
 }
 
 /* SWIPER STYLES */
@@ -353,6 +359,12 @@ form {
   margin: 0 auto;
   border: none;
   border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form__btn:hover{
+  background-color: #218838;
 }
 /* BLOG STYLES */
 .blog {
@@ -375,6 +387,8 @@ form {
 .blod__item-img {
   margin-bottom: 30px;
   width: 100%;
+  height: 300px;
+  display: block;
 }
 
 .blod__item-title {
@@ -384,23 +398,19 @@ form {
 }
 
 .blod__item-link {
-  color: #fff;
   background-color: #0066ff;
-  padding: 10px 20px;
-  text-align: center;
-  border-radius: 6px;
-}
-
-.showmore-link {
-  text-transform: uppercase;
-  background-color: #151515;
   color: #fff;
   padding: 13px;
-  width: 225px;
   text-align: center;
   margin: 20px auto;
   display: block;
   border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.blod__item-link:hover{
+  background-color: #218838;
 }
 
 .choose {
@@ -444,12 +454,14 @@ form {
 
 .card__content {
   padding: 0 5px;
-  border: 1px solid #0066ff;
+  border: 3px solid #0066ff;
   border-top: 0;
 }
 
 .card__img {
   display: block;
+  width: 100%;
+
 }
 
 .card__title {
@@ -475,7 +487,7 @@ form {
 .card__link {
   display: block;
   color: #0066ff;
-  border: 1px solid #0066ff;
+  border: 3px solid #0066ff;
   border-top: 0;
 }
 
@@ -722,12 +734,14 @@ ul.bank__leasing-list {
 }
 
 .back-button{
-  background-color: #0066ff;
+  background-color: #151515;
   color: #fff;
   padding: 10px 20px;
   border-radius: 6px;
   margin-bottom: 50px;
   text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .back-button:hover{
@@ -751,6 +765,9 @@ ul.bank__leasing-list {
   }
   .tabs__content-item {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .blod__item-img{
+    width: 100%;
   }
 }
 

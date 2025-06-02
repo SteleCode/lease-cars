@@ -35,16 +35,26 @@
                   <a href="new-cars.html" class="menu__list-link">АВТОМОБІЛІ</a>
                 </li>
                 <li class="menu__list-item">
-                  <a href="preowned.html" class="menu__list-link">ДОДАТКОВА ІНФОРМАЦІЯ</a>
+                  <a href="preowned.html" class="menu__list-link"
+                    >ДОДАТКОВА ІНФОРМАЦІЯ</a
+                  >
                 </li>
                 <li class="menu__list-item">
-                  <a href="finance.html" class="menu__list-link menu__list-link--active">ОФОРМЛЕННЯ</a>
+                  <a
+                    href="finance.html"
+                    class="menu__list-link menu__list-link--active"
+                    >ОФОРМЛЕННЯ</a
+                  >
                 </li>
                 <li class="menu__list-item">
-                  <a href="lease.html" class="menu__list-link">ЛІЗИНГ ЧИ КРЕДИТ</a>
+                  <a href="lease.html" class="menu__list-link"
+                    >ЛІЗИНГ ЧИ КРЕДИТ</a
+                  >
                 </li>
                 <li class="menu__list-item">
-                  <a href="contacts.html" class="menu__list-link">ЗВ'ЯЗОК З НАМИ</a>
+                  <a href="contacts.html" class="menu__list-link"
+                    >ЗВ'ЯЗОК З НАМИ</a
+                  >
                 </li>
               </ul>
             </nav>
@@ -53,7 +63,9 @@
       </header>
       <main class="main">
         <div class="container">
-          <h2 class="order__title">Заповніть форму для замовлення автомобіля</h2>
+          <h2 class="order__title">
+            Заповніть форму для замовлення автомобіля
+          </h2>
           <div class="order__form">
             <form action="" class="finance__form">
               <input
@@ -103,13 +115,11 @@
                 <img src="images/logo.svg" alt="" class="foot-logo__img" />
               </a>
             </div>
-            <p class="footer__copy-text">
-              Якщо у вас виникли питання про послугу автовикупу TrueCar, будь ласка, зателефонуйте за номером +(380)933000536. Сертифіковані дилери зобов'язані за договором з TrueCar відповідати певним вимогам до обслуговування клієнтів та пройти Програму сертифікації дилерів TrueCar.
+            <p class="footer__copy-text">Курсова робота студента групи КН-22</p>
+            <p class="footer__copy-text">Мороза Дмитра</p>
+            <p class="footer__roots-text">
+              Сайт не є комерційним, всі матеріали було взято з відкритих джерел
             </p>
-            <p class="footer__copy-text">
-              TrueCar не займається посередництвом, продажем або орендою автомобілів. Якщо тільки не зазначено інше, всі автомобілі, представлені на цьому сайті, пропонуються для продажу ліцензованими автодилерами. Всі автомобілі підлягають попередньому продажу. Відвідуючи цей сайт, ви погоджуєтеся з з Умовами надання послуг та Політикою конфіденційності TrueCar.
-            </p>
-            <p class="footer__roots-text">© 2025 D&MLeasing. Всі права захищені</p>
           </div>
         </div>
       </footer>
@@ -118,10 +128,27 @@
     <script>
       // Список доступних авто — має збігатись з тими, що показані на сайті
       const availableCars = [
-        "Toyota Crown 2023", "Prius Prime 2023", "Prius Prime", "Toyota Crown", "Toyota Prius 2023", "Toyota Prius", 
-        "Hyundai Kona 2023", "Hyundai Kona", "Ford Explorer 2023", "Ford Explorer", "Santa Fe 2023", "Santa Fe", 
-        "KIA Niro 2023", "KIA Niro", "Honda CR-V 2023", "Honda CR-V", "Hyundai Tucson", "Chevrolet Equinox", 
-        "Jeep Wrangler 2023", "Jeep Wrangler", "Chevrolet Silverado"
+        "Toyota Crown 2023",
+        "Prius Prime 2023",
+        "Prius Prime",
+        "Toyota Crown",
+        "Toyota Prius 2023",
+        "Toyota Prius",
+        "Hyundai Kona 2023",
+        "Hyundai Kona",
+        "Ford Explorer 2023",
+        "Ford Explorer",
+        "Santa Fe 2023",
+        "Santa Fe",
+        "KIA Niro 2023",
+        "KIA Niro",
+        "Honda CR-V 2023",
+        "Honda CR-V",
+        "Hyundai Tucson",
+        "Chevrolet Equinox",
+        "Jeep Wrangler 2023",
+        "Jeep Wrangler",
+        "Chevrolet Silverado",
       ];
 
       document.addEventListener("DOMContentLoaded", function () {
@@ -136,7 +163,9 @@
 
           // Перевірка на наявність автомобіля
           if (!availableCars.includes(enteredCarName)) {
-            alert("Цієї машини немає в нашому каталозі. Перевірте правильність назви.");
+            alert(
+              "Цієї машини немає в нашому каталозі. Перевірте правильність назви."
+            );
             carNameInput.focus();
             return;
           }
@@ -156,6 +185,13 @@
           alert("Форму успішно надіслано! Очікуйте дзвінок менеджера.");
           form.submit(); // або обробка через fetch/AJAX
         });
+      });
+
+      const menuBtn = document.querySelector(".menu__btn");
+      const menu = document.querySelector(".menu__list");
+
+      menuBtn.addEventListener("click", () => {
+        menu.classList.toggle("menu__list--active");
       });
     </script>
   </body>
